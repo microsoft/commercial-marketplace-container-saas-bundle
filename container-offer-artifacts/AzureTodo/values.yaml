@@ -1,0 +1,50 @@
+# Azure Vote UI control
+title: AzureToDoApp
+global:
+  azure:
+    billingIdentifier: DONOTMODIFY
+    images:
+      frontend:
+        digest: sha256:3793047f288ef90aae7314aa0be8fd0196f6a9c198814bff7322ac19ae0ad0dc
+        image: todojs
+        registry: msalem2022.azurecr.io
+
+      backend:
+        digest: sha256:d19cd73cf3cc6116d01a3ca2daa5e3cd99e66030a668c1618c065f5d9c1d0fc2
+        image: mongo
+        registry: msalem2022.azurecr.io
+
+      metered:
+        digest: sha256:3690b160f30d7b954d10908026557145ce8e0b152b1fe3fb425b941f79afe558
+        image: todometer
+        registry: msalem2022.azurecr.io
+
+# MongoDB Admin
+mongoDBAdmin: mongoadmin
+mongoDBPassword: secret
+
+# Service controls
+serviceType: LoadBalancer
+appFrontLabel: todoapp
+appBackLabel: mongodb
+appMeteredLabel: todoappcron
+customerSubscriptionId: default
+customerPlanId: default
+#ingressName
+clusterDNS: Add-AKS-DNS.aksapp.io
+
+# how many frontends do we want?
+replicaFrontCount: 1
+replicaBackCount: 1
+
+## Where it will be deployed
+nameSpace: contoso
+
+
+
+
+
+
+
+
+
